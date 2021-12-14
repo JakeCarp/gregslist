@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "6+THnBRQHOTzH6W/sBwVn1wbQ8fxskXLxdNlEEcuL2w=",
+  "Source": "gregslist",
+  "BasePath": "_content/gregslist",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
