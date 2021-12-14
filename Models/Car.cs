@@ -2,7 +2,7 @@ namespace gregslist.Models
 {
     public class Car
     {
-        public Car(string? id, int myProperty)
+        public Car(string? id)
         {
             //NOTE This line establishes a new globally unique ID
             Id = Guid.NewGuid().ToString();
