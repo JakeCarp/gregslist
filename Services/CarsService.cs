@@ -40,7 +40,10 @@ namespace gregslist.Services
         {
             Car oldCar = GetOne(updatedCar.Id);
             oldCar.Model = updatedCar.Model != null ? updatedCar.Model : oldCar.Model;
-            //TODO Fill out these for each of the possibly updated fields
+            oldCar.Make = updatedCar.Make != null ? updatedCar.Make : oldCar.Make;
+            oldCar.Miles = updatedCar.Miles;
+            oldCar.Price = updatedCar.Price;
+            oldCar.Description = updatedCar.Description != null ? updatedCar.Description : oldCar.Description;
             //NOTE Will Save to DB here later
             return oldCar;
         }

@@ -6,7 +6,8 @@ namespace gregslist.DB
     {
         public static List<Car>? Cars { get; private set; } = new List<Car>()
         {
-            //TODO Add Cars Here
+        {new Car("Toyota", "AE86", 1000, 10000, "It's a thing")},
+        {new Car('Honda', "Accord", 10, 20000, "New New")}
         };
         public static List<House>? Houses { get; private set; } = new List<House>()
         {
