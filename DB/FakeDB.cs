@@ -11,7 +11,8 @@ namespace gregslist.DB
         };
         public static List<House>? Houses { get; private set; } = new List<House>()
         {
-            //TODO Add Houses Here
+            {new House(1997, 100000, 2, 3, 2, "Good House")},
+            {new House(2015, 200000, 3, 4, 5, "BIG House")}
         };
 
         public static List<Job> Jobs { get; private set; } = new List<Job>()

@@ -24,7 +24,7 @@ namespace gregslist.Models
         public int Price { get; set; }
 
         public string Model { get; set; }
-        public string? Id { get; set; }
+        public string? Id { get; private set; }
         // NOTE This is the method of requiring a property, only  applys to the one that immediatly follows
         // [Required]
         // public int MyProperty { get; private set; }
