@@ -4,12 +4,12 @@ namespace gregslist.Models
     {
         public Car(string? id, int myProperty)
         {
-            //This line establishes a new globally unique ID
+            //NOTE This line establishes a new globally unique ID
             Id = Guid.NewGuid().ToString();
         }
         public string Model { get; set; }
         public string? Id { get; set; }
-        // This is the method of requiring a property, only  applys to the one that immediatly follows
+        // NOTE This is the method of requiring a property, only  applys to the one that immediatly follows
         // [Required]
         // public int MyProperty { get; private set; }
         //Can also use range for integers

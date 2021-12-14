@@ -40,7 +40,8 @@ namespace gregslist.Services
         {
             Car oldCar = GetOne(updatedCar.Id);
             oldCar.Model = updatedCar.Model != null ? updatedCar.Model : oldCar.Model;
-            //Fill out these for each of the possibly updated fields
+            //TODO Fill out these for each of the possibly updated fields
+            //NOTE Will Save to DB here later
             return oldCar;
         }
     }

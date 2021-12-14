@@ -16,7 +16,7 @@ namespace gregslist.Controllers
             _cs = cs;
         }
 
-        //Used to extabish CRUD Methods
+        //NOTE Used to extabish CRUD Methods
         [HttpGet]
         public ActionResult<IEnumerable<Car>> GetAllCars()
         {
@@ -48,7 +48,7 @@ namespace gregslist.Controllers
         }
 
         [HttpPost]
-        //req.body is now [FromBody]
+        //NOTE req.body is now [FromBody]
         public ActionResult<Car> Create([FromBody] Car newCar)
         {
             try
