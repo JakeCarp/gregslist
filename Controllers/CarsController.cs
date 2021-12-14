@@ -62,5 +62,22 @@ namespace gregslist.Controllers
             }
         }
 
+        [HttpPost]
+        //req.body is now [FromBody]
+        public ActionResult<Car> Create([FromBody] Car newCar)
+        {
+            try
+            {
+                Car car = _cs.Create(newCar);
+                return car;
+            }
+            catch (System.Exception e)
+            {
+
+                return BadRequest(e.Message);
+            }
+        }
+
     }
 }
+1

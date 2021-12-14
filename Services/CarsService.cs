@@ -24,6 +24,11 @@ namespace gregslist.Services
             }
         }
 
+        internal Car Create(Car newCar)
+        {
+            FakeDB.Cars.Add(newCar);
+            return newCar;
+        }
         internal string Remove(string id)
         {
             Car car = GetOne(id);
