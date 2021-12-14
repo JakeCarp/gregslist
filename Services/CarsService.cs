@@ -35,5 +35,13 @@ namespace gregslist.Services
             FakeDB.Cars.Remove(car);
             return "Deleted";
         }
+
+        internal Car Update(Car updatedCar)
+        {
+            Car oldCar = GetOne(updatedCar.Id);
+            oldCar.Model = updatedCar.Model != null ? updatedCar.Model : oldCar.Model;
+            //Fill out these for each of the possibly updated fields
+            return oldCar;
+        }
     }
 }

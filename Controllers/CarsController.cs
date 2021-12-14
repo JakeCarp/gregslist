@@ -47,21 +47,6 @@ namespace gregslist.Controllers
             }
         }
 
-        [HttpDelete("{id}")]
-        public ActionResult<String> Remove(String id)
-        {
-            try
-            {
-                string res = _cs.Remove(id);
-                return Ok(res);
-            }
-            catch (System.Exception e)
-            {
-
-                return BadRequest(e.Message);
-            }
-        }
-
         [HttpPost]
         //req.body is now [FromBody]
         public ActionResult<Car> Create([FromBody] Car newCar)
@@ -77,6 +62,34 @@ namespace gregslist.Controllers
                 return BadRequest(e.Message);
             }
         }
+        [HttpPut("{id}")]
+        public ActionResult<Car> Update([FromBody] Car updatedCar)
+        {
+            try
+            {
+                Car car = _cs.Update(updatedCar);
+                return car;
+            }
+            catch (System.Exception e)
+            {
+                return BadRequest(e.Message);
+            }
+        }
+        [HttpDelete("{id}")]
+        public ActionResult<String> Remove(String id)
+        {
+            try
+            {
+                string res = _cs.Remove(id);
+                return Ok(res);
+            }
+            catch (System.Exception e)
+            {
+
+                return BadRequest(e.Message);
+            }
+        }
+
 
     }
 }
